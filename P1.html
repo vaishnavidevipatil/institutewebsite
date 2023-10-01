@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>p1</title>
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         *{
             margin: 0;
@@ -14,11 +15,12 @@
             height: 100vh;
             width: 100%;
             background-image:url(img/img1.jpeg);
-            background-position: center;
+            background-attachment:inherit;
+            
+            background-position: repeat;
             background-size: cover;
             position: relative;
         } 
-        
         nav{
             display: flex;
             padding: 2% 6% ;
@@ -28,13 +30,26 @@
             text-decoration: none;
             font-size: 13px;
         } 
+        .nav .fa{
+            display: block;
+            color: #fff;
+            margin: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .nav-link ul{
+              display: block;
+              color: #fff;
+              margin: 10px;
+              font-size: 22px;
+              cursor: pointer;
+        }
         nav ul{
             list-style: none;
             text-align: right;
             width: 100% ;
             padding-right: 60px;
         } 
-
         nav ul li{
             display: inline-block;
             margin: 10px 20px;
@@ -43,26 +58,90 @@
             color: #fff;
             text-decoration: none;
         }
-      
-        /* .text-box{
+        #text-box{
             width: 90%;
             color: #fff;
              position: absolute;
-         
             transform: translate(-50%,-50%);
             text-align: center;
-            margin-top:100px; 
+            margin:350px; 
         }
-        .text-box h1{
+        #text-box h1{
             font-size: 62px;
             color: #fff;
-        } */
-        .text-box p{
+            margin: 350px;
+        }
+        #text-box p{
             margin: 10px 0 40px;
             font-size: 14px;
-            color: white;
+            color: black;
         } 
+        #two{
+            margin-left: 850px;
+        }
+        .course{
+            width: 80%;
+            margin: auto;
+            color:rgb(37, 14, 14);
+            text-align: center;
+            text-decoration: none;
+            padding-top: 100px;
+            font-size: 13px;
+        }
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+        .one{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+
+        }
+        .herobtn{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border:  1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background:none;
+            position: relative;
+            cursor: pointer;
+        }
+      .herobtn:hover{
+        border: 1px solid  #fff;
+        background:#f44336 ;
+        transition: 2s;
+      }
+      nav .fa{
+        display: none;
+      }
+      @media(max-width:700px){
+        .text-box h1{
+            font-size: 20px;
+        }
+        .nav-link ul li{
+            display: block;
+        }
+        .nav-link{
+            position: absolute;
+            background: #f44336;
+            height: 100vh;
+            width: 200px;
+            top:0;
+            text-align: left;
+            z-index: 2;
+        }
+      }
     </style>
+ 
 </head>
 <body>
     <!-- <img src="./img/img1.jpeg"> -->
@@ -70,21 +149,80 @@
         <nav>
             <a href=""><img src="./img/logo11.jpeg"></a> 
             <div id="nav-links">
+                <i class="fa-regular fa-circle-xmark"></i>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">BLOG</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li><a href="#scroll">HOME</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="course.html">COURSES</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
+            <i class="fa-solid fa-bars"></i>
         </nav>
         <div id="text-box">
             <h1>OUR TRAINING INISTITUE</h1>
-            <p>Learning the skills is the way of creative in educating yourself by your ideas can make build better.Just HTML,CSS,JS,React 
-                include Font-end of Full Stack and Back-end include python,MangoDB.Database is the SQL example.
+            <p>Learning the skills is the way of creative in educating yourself by your ideas <br>
+                can make build better.Just HTML,CSS,JS,React 
+                include Font-end of Full Stack and<br>
+                 Back-end include python,MangoDB.Database is the SQL example.
+               
             </p>
-            <a href="">Visit Us to Know More</a>
+            <a href="" class="herobtn">Visit Us to Know More</a>
         </div>
     </section>
+    <div id="two">
+    <img src="./img/fortinet-company.jpg" alt="err"  srcset="">
+    
+</div>
+    <section>
+        <p>
+            “Fortinet's vision is to make possible a digital world that organizations can always trust by securing 
+            people, devices and data everywhere. To help achieve this, Fortinet is committed to closing the cyber skills 
+            gap and raising cyber awareness through our TAA initiative and Training Institute programs.
+             Last year we committed to training 1 million people
+             on cybersecurity by 2026 and so far we're tracking ahead of our goal for the year toward this pledge.”
+        </p>
+       
+        <section class="course">
+            <h1>MAIN COURSES</h1>
+            <div class="one">
+            <a href="https://www.crampete.com/blogs/full-stack-developer-course-syllabus/#:~:text=Front%2Dend%20(HTML%2C%20CSS,(AWS%2C%20Heroku%2C%20Apache)"><h2>Full Stack Development</h2></a>
+            <img src="./img/f1.jpeg"></div>
+        <div class="one">
+            <a href="https://fortune.com/education/careers/how-to-become-a-data-analyst/">
+                <h2>DATA ANALYTICS</h2><img src="./img/a1.jpeg"></a>
+            </div>
+            <div class="one">
+            <a href="https://en.wikipedia.org/wiki/Cloud_computing"><h2>CLOUD COMPUTIING</h2><img src="./img/c2.jpeg"></a>
+        </div>
+        <div>
+            <nav>
+                <footer>
+                    <form>
+                        <legend>login form</legend>
+                        <input type="text" value="Name">
+                        <input type="email" value="email">
+                        <input type="password" value="password">
+                        <label>Gender</label>
+                        <input type="radio" placeholder="Female">
+                        <input type="radio"><label>Male</label>
+                        <input type="radio"><label>Other</label>
+                  
+                    </form>
+                </footer>
+            </nav>
+        </div>
+    </section>
+
 </body>
+<script>
+    var navlink = document.getElementById("navl links");
+    function showMenu(){
+        navlinks.style.right="0";
+    }
+    function hideMenu(){
+        navlink.style.right="-200";
+    }
+</script>
 </html>
