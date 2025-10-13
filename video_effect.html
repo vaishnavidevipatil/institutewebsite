@@ -1,0 +1,163 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    .video-heading-container {
+    /* Set the container to occupy the full viewport height */
+    height: 100vh;
+    /* Use a flexbox to center the heading */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Fallback background color */
+    position: relative; /* Use a position relative to serve as a reference point for the video */
+    z-index: 1; /* Ensure the heading is on top of the video */
+}
+
+    .video-heading-container h1 {
+  /* Set font properties. Large, bold fonts work best. */
+    font-size: 15vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff; /* A light color for the text itself */
+    
+  /* Use the key CSS property to make the text transparent and show the video */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #3bb630; /* A thin white stroke for better visibility */
+  
+  /* Clip the video to the text's shape */
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  z-index: 2; /* Ensure the text is above the video */
+}
+
+.video-heading-container video {
+  /* Position the video absolutely to cover the entire container */
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; /* This ensures the video covers the container without distortion */
+  
+  /* Place the video behind the text */
+  z-index: 0;
+}
+    </style>
+
+</head>
+<body>
+    <div class="video-heading-container">
+  <h1>HTML AND CSS</h1>
+  <video autoplay muted loop>
+    <source src="./img/pexels_videos_2025634 (720p).mp4" type="video/mp4">
+  </video>
+</div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Text Effect</title>
+  <style>
+    /* Reset default spacing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #e49090;
+      overflow: hidden;
+    }
+
+    .video-heading-container {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Add gradient overlay to enhance contrast */
+    .video-heading-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+      z-index: 1;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      filter: brightness(90%) contrast(110%) saturate(120%);
+      z-index: 0;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 12vw, 14rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      background: url("./pexels_videos_2025634 (720p).mp4");
+      color: #c69a9a;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 2px #8ad0e7;
+      -webkit-background-clip: text;
+      background-clip: text;
+      z-index: 2;
+      position: relative;
+      animation: fadeIn 2s ease-in-out, pulse 3s infinite alternate;
+    }
+
+    /* Smooth fade and glow animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes pulse {
+      from {
+        text-shadow: 0 0 10px #3bb630, 0 0 20px #3bb630;
+      }
+      to {
+        text-shadow: 0 0 25px #00ff5a, 0 0 50px #00ff5a;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="video-heading-container">
+    <h1>HTML AND CSS</h1>
+    <video autoplay muted loop>
+      <source src="./img/pexels_videos_2025634 (720p).mp4" type="video/mp4" />
+    </video>
+  </div>
+</body>
+</html>

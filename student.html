@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student registration</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+   
+    <form>
+        <fieldset>
+            <h1><U><b>STUDENT REGISTRATION FORM</b></U></h1>
+            <table>
+                <td><label for="name">FIRST NAME:</label></td>
+                <td><input type="text" id="name" name="name" placeholder="Enter your first name" size="40"></td>
+        
+                <tr>
+                    <td><label for="last_name">LAST NAME: </label></td>
+                    <td><input type="text" id="last_name" name="last_name" placeholder="Enter your last name" size="40"></td>
+                </tr>
+                <br>
+                <tr>
+                 <td><label for="date_of_birth">DATE OF BIRTH: </label></td>
+                    <td>
+                        <input type="number" id="date" name="date" placeholder="DD" min="1" max="31">
+                        <select name="month" id="month" title="month">
+                            <option >Month</option>
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="june">June</option>
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="september">September</option>
+                            <option value="october">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
+                        </select>
+                        <input type="number" id="year" name="year" placeholder="Year" min="1900" max="2100">
+                    </td>
+                </td>
+                       
+
+                <tr>
+                    <td><label for="gender">GENDER: </label></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="address">ADDRESS: </label></td>
+                    <td><textarea id="address" name="address" rows="4" cols="40" placeholder="Enter your address"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><label for="city">CITY: </td><label></td>
+                    <td><input type="text" id="city" name="city" placeholder="Enter your city name" size="30"></td>
+                </tr>
+                <tr>
+                    <td><label for="pincode">PINCODE: </label></td>
+                    <td><input type="text" id="pincode" name="pincode" placeholder="Enter pincode" size="6" maxlength="6"> 
+                        (6 digit pincode)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="state">STATE: </label></td>
+                    <td><input type="text" placeholder="Enter your state name" size="30"></td>
+                </tr>
+                <tr>
+                    <td><label for="country">COUNTRY: </label></td>
+                    <td><input type="text" id="country" name="country" placeholder="Enter your country name" size="30"></td>
+                </tr>
+                <tr>
+                    <td><label for="hobbies">HOBBIES: </label></td>
+                    <td><input type="checkbox" id="hobby1" name="hobbies" value="Singing"><label for="hobby1">Singing</label>
+                    <input type="checkbox" id="hobby2" name="hobbies" value="Dancing"><label for="hobby2">Dancing</label>
+                    <input type="checkbox" id="hobby3" name="hobbies" value="Sketching"><label for="hobby3">Sketching</label>
+                    <input type="checkbox" id="hobby4" name="hobbies" value="Drawing"><label for="hobby4">Drawing</label></td>
+                    <td><input type="checkbox" id="hobby5" name="hobbies" value="Others"><label for="hobby5">Others</label></td>
+                    <td><input type="text" id="others" name="others" placeholder="Enter any other hobby" size="30"></td>
+                </tr>
+                <tr> 
+                <!-- 2nd table -->
+                    <table>
+                    <tr>        
+                    <td >        <!-- Title row -->
+                    <td rowspan="6">
+                            QUALIFICATION
+                        </td></td>
+                            <td><b>SL.No</b></td><br>
+                            <td><b>Examination</b></td>
+                            <td><b>Board</b></td>
+                            <td><b>Percentage</b></td>
+                            <td><b>Year of Passing</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="1"></td>
+                            <td> 1.</td>
+                            <td> <b>Class X</b></td>
+                            <td><input type="text" id="board1" name="board1" placeholder="Enter Class X Board"></td>
+                            <td><input type="text" id="percentage1" name="percentage1" placeholder="Enter Class X Percentage"></td>
+                            <td><input type="text" id="year1" name="year1" placeholder="  Class X Year" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="1"></td>
+                            <td> 2.</td>
+                            <td><b>Class XII</b></td>
+                            <td><input type="text" id="board2" name="board2" placeholder="Enter Class XII Board"></td>
+                            <td><input type="text" id="percentage2" name="percentage2" placeholder="Enter Class XII Percentage"></td>
+                            <td><input type="text" id="year2" name="year2" placeholder="  Class XII Year" size="30"></td>
+                        </tr>
+                        <tr>
+                             <td colspan="1"></td>
+                            <td> 3.</td>
+                            <td><b>Graduation</b></td>
+                            <td><input type="text" id="board3" name="board3" placeholder="Enter Graduation Board"></td>
+                            <td><input type="text" id="percentage3" name="percentage3" placeholder="Enter Graduation Percentage"></td>
+                            <td><input type="text" id="year3" name="year3" placeholder="  Graduation Year" size="30"></td>
+                          
+                        <tr>
+                             <td colspan="1"></td>
+                        <td> 4.</td>
+                            <td><b>Master’s</b></td>
+                            <td><input type="text" id="board4" name="board4" placeholder="Enter Master’s Board"></td>
+                            <td><input type="text" id="percentage4" name="percentage4" placeholder="Enter Master’s Percentage"></td>
+                            <td><input type="text" id="year4" name="year4" placeholder="  Master’s Year" size="30"></td>
+                     
+                        </tr>
+                    </table>
+                    <tr>
+                        <td colspan="1"> COURSE:</td>
+                        <td><input type="radio" id="course1" name="course" value="B.C.A">
+                        <label for="course1">B.C.A</label>
+                        <input type="radio" id="course2" name="course" value="B.Com">
+                        <label for="course2">B.Com</label>
+                        <input type="radio" id="course3" name="course" value="BA">
+                        <label for="course3">BA</label>
+                        <input type="radio" id="course4" name="course" value="B.Sc">
+                        <label for="course4">B.Sc</label>
+                    </tr></td>
+                </tr>  
+            </table>
+            <br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+    </form>
+</body>
+</html>
