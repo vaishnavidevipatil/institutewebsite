@@ -1,0 +1,107 @@
+body{
+    /* background-image: url("https://wallpapercave.com/wp/wp14847863.webp"); */
+    background-size: cover;
+    margin: 0;
+    background-image: url(./Amazon_Prime.png) 
+    
+}
+nav{
+    border:2px solid blue;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    border: none;
+    margin-top: 0px;  
+
+}
+
+#c1{
+    border: 2px solid red;
+    width: 70%;
+    height: 60px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 15px;
+    background-color: black;
+    border: none;
+}
+
+#c2{
+    border: 2px solid rgb(223, 52, 52);
+    width: 25%;
+    height: 60px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 15px;
+    background-color: black;
+    border: none;
+}
+
+#b1 {
+  height: 45px;
+  width: fit-content;
+  border: none;
+
+  background-color: black;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* box-shadow: 0 
+   0 10px rgba(0,0,0,0.3); */
+}
+
+ #b1:hover{
+    color: black;
+    width: 50px;
+    background-color: white;
+    border-radius:50%;
+    font-weight: 300;
+}
+
+#b4{
+    height: 50px;
+    width: 120px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+ #b4:hover{
+    color: black;
+    width: 120px;
+    background-color: white;
+    border-radius:20px;
+    font-weight: 300;
+}
+
+#b2{
+    height: 50px;
+    width: 90px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 15px;
+}
+
+ #b2:hover{
+    color: black;
+    background-color: rgb(26, 152, 255);
+    border-radius:20px;
+    font-weight: 300;
+    
+}
+
+i{
+    font-size: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
